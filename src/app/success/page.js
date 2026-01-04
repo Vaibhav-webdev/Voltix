@@ -2,11 +2,9 @@
 
 import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
-import { useSession } from "next-auth/react"
 import { CheckCircle } from "lucide-react"
 
 export default function SuccessPage() {
-  const { data: session } = useSession()
 
   const router = useRouter()
     const [showCheck, setShowCheck] = useState(false)
@@ -34,7 +32,7 @@ export default function SuccessPage() {
               Processing Payment...
             </h2>
             <p className="text-gray-500 mt-2">
-              Please wait, {session.user.name}
+              Please wait, Just a Few Seconds...
             </p>
           </>
         ) : (
