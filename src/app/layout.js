@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google"
+// import { Inter } from "next/font/google"
 import { Toaster } from "sonner"
 import "./globals.css"
 import Navbar from "./components/navbar"
@@ -6,10 +6,10 @@ import SessionProviderWrapper from "./components/SessionProviderWrapper"
 import Footer from "./components/footer"
 import Providers from "./providers"
 
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"]
-})
+// const inter = Inter({
+//   subsets: ["latin"],
+//   weight: ["400", "500", "600", "700", "800", "900"]
+// })
 
 export const metadata = {
   title: "Electronics E-Commerce | Website",
@@ -19,7 +19,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <SessionProviderWrapper>
           <Navbar />
           <Providers>
