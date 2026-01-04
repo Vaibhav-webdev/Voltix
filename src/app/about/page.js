@@ -9,7 +9,7 @@ import { Gem } from 'lucide-react'
 
 const page = () => {
   return (
-    <div className='mt-16 px-5 sm:px-8 lg:px-20 pb-20'>
+    <div className='mt-8 md:mt-16 px-5 sm:px-8 lg:px-20 pb-20'>
       <div className=''>
         <div>
           <h2 className='text-center lg:text-left text-3xl sm:text-4xl lg:text-6xl leading-tight font-bold'>The Story of Innovation, Style, and the Soul of Our Store.</h2>
@@ -38,42 +38,42 @@ const page = () => {
           </div>
         </div>
       </div>
-      <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 py-12'>
+      <div className='grid pt-18 grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-14 lg:gap-8 py-12'>
         <div className='flex flex-col items-center'>
           <div>
-            <h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold'>+12M</h2>
+            <h2 className='text-6xl lg:text-5xl font-bold'>+12M</h2>
           </div>
           <div>
             <p className='text-center text-gray-700'>Tot  al Users</p>
           </div>
         </div>
-        <div>
+        <div className='flex flex-col items-center'>
           <div>
-            <h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold'>80K</h2>
+            <h2 className='text-6xl lg:text-5xl font-bold'>80K</h2>
           </div>
           <div>
             <p className=' text-gray-700'>Star Customers</p>
           </div>
         </div>
-        <div>
+        <div className='flex flex-col items-center'>
           <div>
-            <h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold'>+25</h2>
+            <h2 className='text-6xl lg:text-5xl font-bold'>+25</h2>
           </div>
           <div>
             <p className=' text-gray-700'>Collections</p>
           </div>
         </div>
-        <div>
+        <div className='flex flex-col items-center'>
           <div>
-            <h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold'>2025</h2>
+            <h2 className='text-6xl lg:text-5xl font-bold'>2025</h2>
           </div>
           <div>
             <p className=' text-gray-700'>Year Founded</p>
           </div>
         </div>
-        <div>
+        <div className='flex flex-col items-center'>
           <div>
-            <h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold'>+460</h2>
+            <h2 className='text-6xl lg:text-5xl font-bold'>+460</h2>
           </div>
           <div>
             <p className=' text-gray-700'>Total Products</p>

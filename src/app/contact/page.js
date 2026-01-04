@@ -46,7 +46,7 @@ const page = () => {
     };
 
     return (
-        <div className="mt-16 px-4 sm:px-6 md:px-10 lg:px-20 pb-20">
+        <div className="mt-10 lg:mt-16 px-4 sm:px-6 md:px-10 lg:px-20 pb-20">
   <div className="bg-gray-100 mb-10 shadow-xl px-5 sm:px-10 py-10 sm:py-12 rounded-xl flex flex-col lg:flex-row gap-10">
     
     {/* Left Info Section */}

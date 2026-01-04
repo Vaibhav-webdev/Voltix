@@ -16,8 +16,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <SessionProviderWrapper>
-          <Navbar />
           <Providers>
+          <Navbar />
             <main className="pt-20">
               {children}
               <Toaster

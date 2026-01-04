@@ -6,9 +6,10 @@ const AppContext = createContext(null)
 
 export const AppProvider = ({ children }) => {
   const [cart, setCart] = useState([])
+  const [theme, setTheme] = useState("light");
 
   return (
-    <AppContext.Provider value={{ cart, setCart }}>
+    <AppContext.Provider value={{ cart, setCart, theme, setTheme }}>
       {children}
     </AppContext.Provider>
   )

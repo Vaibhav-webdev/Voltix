@@ -27,7 +27,7 @@ const Page = () => {
   const { cart, setCart } = useAppContext()
 
   return (
-    <div className='mt-12 px-20 pb-20'>
+    <div className='mt-12 px-[14vw] md:px-20 pb-20'>
       <div>
         <div className='flex'>
           <h2 className={`cursor-pointer text-left font-bold text-4xl relative before:content-[''] before:absolute before:left-1 before:-bottom-2 before:h-1 before:w-4 before:bg-black before:transition-all before:duration-300 hover:before:w-30`}>Store</h2>

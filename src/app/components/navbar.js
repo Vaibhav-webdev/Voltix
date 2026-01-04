@@ -58,7 +58,6 @@ const navbar = () => {
 
       <Link href="/contact" className={linkStyle("/contact")}>Contact</Link>
     </ul>
-
     {/* Desktop Auth Buttons */}
     <div className="hidden lg:flex gap-3">
       {isLoggedIn ? (

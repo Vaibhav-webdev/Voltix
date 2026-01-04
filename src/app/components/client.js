@@ -4,7 +4,7 @@ import "../components/styles/testimonial.css";
 
 const client = () => {
     return (
-        <div className='pt-18 px-10 lg:px-30 pb-20 shadow-xl'>
+        <div className='pt-18 px-8 lg:px-30 pb-20 shadow-xl'>
             <div>
                 <h2 className='text-center text-5xl font-bold'>What our clients says</h2>
             </div>

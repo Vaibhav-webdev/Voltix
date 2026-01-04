@@ -151,7 +151,7 @@ export default function ProductPage() {
                     {/* Size */}
                     <div className="mb-6">
                         <p className="font-semibold mb-2">Size</p>
-                        <div className="flex gap-3">
+                        <div className="grid grid-cols-4 lg:grid-cols-5 gap-3">
                             {sizes.map((s) => (
                                 <button
                                     key={s}
