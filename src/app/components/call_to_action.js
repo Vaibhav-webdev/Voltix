@@ -3,11 +3,11 @@ import Link from 'next/link'
 
 const CallToAction = () => {
   return (
-    <div className="pt-16 sm:pt-20 flex justify-center items-center pb-16 sm:pb-20 shadow-xl">
-  <div className="bg-gray-100 w-[90vw] sm:w-[85vw] md:w-[80vw] lg:w-[70vw] px-6 sm:px-16 md:px-28 py-12 sm:py-16 rounded-xl text-center">
+    <div className="pt-16 sm:pt-20 flex justify-center items-center pb-16 sm:pb-20">
+  <div className="bg-green-50 w-[90vw] sm:w-[85vw] md:w-[80vw] lg:w-[70vw] px-6 sm:px-16 md:px-28 py-12 sm:py-16 rounded-xl text-center">
     
     {/* Heading */}
-    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
+    <h2 className="text-3xl sm:text-4xl md:text-5xl text-gray-800 font-bold">
       Explore Our Latest Watch and Gadget Collection!
     </h2>
     
@@ -18,8 +18,8 @@ const CallToAction = () => {
     
     {/* Button */}
     <div className="flex justify-center mt-6 sm:mt-7">
-      <Link href={"/store"}>
-        <button className="bg-black hover:bg-transparent cursor-pointer transition-all ease-in-out duration-200 border hover:text-black text-center rounded-4xl px-5 sm:px-7 py-3 sm:py-4 font-semibold text-white text-sm sm:text-base">
+      <Link href={"/dashboard"}>
+        <button className="bg-green-600 hover:bg-transparent cursor-pointer transition-all ease-in-out duration-200 border hover:text-black text-center rounded-4xl px-5 sm:px-7 py-3 sm:py-4 font-semibold text-white text-sm sm:text-base">
           Get Started
         </button>
       </Link>

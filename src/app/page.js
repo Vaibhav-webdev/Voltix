@@ -1,24 +1,21 @@
-import React from 'react'
-import Heading from './components/heading'
-import About from './components/about'
-import BestSeller from './components/best-seller'
-import Features from './components/features'
-import Client from './components/client'
-import CallToAction from './components/call_to_action'
-import Questions from './components/questions'
+import Navbar from "./components/navbar";
+import HeroSection from "./components/heroSection"
+import FeaturesSection from "./components/featuresSection";
+import Marquee from "./components/Marquee"
+import Questions from "./components/questions";
+import CallToAction from "./components/call_to_action";
+import Footer from "./components/footer";
 
-const page = () => {
+export default function Home() {
   return (
-    <div>
-        <Heading />
-        <About />
-        <BestSeller />
-        <Features />
-        <Client />
-        <CallToAction />
-        <Questions />
-    </div>
-  )
+    <>
+      <Navbar />
+      <HeroSection />
+      <FeaturesSection />
+      <Marquee />
+      <CallToAction />
+      <Questions />
+      <Footer />
+    </>
+  );
 }
-
-export default page

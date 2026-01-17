@@ -51,7 +51,7 @@ const page = () => {
     
     {/* Left Info Section */}
     <div className="lg:w-1/2 flex flex-col gap-6">
-      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-snug">
+      <h2 className="text-3xl text-gray-600 sm:text-4xl lg:text-5xl font-bold leading-snug">
         Get In Touch With Our Team Today
       </h2>
       <p className="text-gray-600 text-base sm:text-lg py-2 sm:py-5">
@@ -60,7 +60,7 @@ const page = () => {
 
       {/* Call Us */}
       <div className="flex items-center mt-2 sm:mt-4 gap-4">
-        <div className="bg-black p-4 rounded-xl flex justify-center items-center">
+        <div className="bg-green-500 p-4 rounded-xl flex justify-center items-center">
           <PhoneCall className="text-white" />
         </div>
         <div>
@@ -71,7 +71,7 @@ const page = () => {
 
       {/* Location */}
       <div className="flex items-center mt-2 sm:mt-4 gap-4">
-        <div className="bg-black p-4 rounded-xl flex justify-center items-center">
+        <div className="bg-green-500 p-4 rounded-xl flex justify-center items-center">
           <LocationEdit className="text-white" />
         </div>
         <div>
@@ -137,7 +137,7 @@ const page = () => {
           <div className="flex justify-start">
             <button
               type="submit"
-              className="bg-black text-white mt-2 sm:mt-3 px-4 py-3 text-sm sm:text-base rounded-lg hover:bg-green-700 transition-all"
+              className="bg-green-600 text-white mt-2 sm:mt-3 px-4 py-3 text-sm sm:text-base rounded-lg hover:bg-green-700 transition-all"
             >
               Send Now
             </button>

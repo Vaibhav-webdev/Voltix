@@ -9,10 +9,10 @@ const page = () => {
     <div className="bg-gray-100 rounded-xl py-7 sm:py-9 px-5 sm:px-9">
       <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold">Terms and Conditions</h2>
       <p className="text-gray-700 mt-5 text-base sm:text-lg">
-        Last updated: <b className="text-black">26/12/2025</b>
+        Last updated: <b className="text-black">26/1/2026</b>
       </p>
       <p className="text-gray-700 mt-5 text-base sm:text-lg">
-        These Terms and Conditions govern your use of <b className="text-black">[Voltix.com], Owner [Vaibhav Shukla]</b>. This website is created as a demo e-commerce project for learning and portfolio purposes only. By accessing or using this website, you agree to be bound by these Terms and Conditions.
+        These Terms and Conditions govern your use of <b className="text-black">[Resume.com], Owner [Vaibhav Shukla]</b>. This website is created as a demo e-commerce project for learning and portfolio purposes only. By accessing or using this website, you agree to be bound by these Terms and Conditions.
       </p>
     </div>
 

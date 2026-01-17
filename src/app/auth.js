@@ -76,7 +76,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       session.user.id = token.id
       return session
     },
-    
+
     async signIn({ user, account }) {
       if (account.provider === "google" || account.provider === "github") {
         const client = await clientPromise
@@ -90,7 +90,9 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
           await db.collection("users").insertOne({
             name: user.name,
             email: user.email,
+            password: null,
             provider: account.provider,
+            resumes: [], // 👈 resume builder ready
             createdAt: new Date()
           })
         }

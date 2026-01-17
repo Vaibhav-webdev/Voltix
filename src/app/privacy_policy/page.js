@@ -9,10 +9,10 @@ const page = () => {
     <div className="bg-gray-100 rounded-xl py-7 sm:py-9 px-5 sm:px-9">
       <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold">Privacy Policy</h2>
       <p className="text-gray-700 mt-5 text-base sm:text-lg">
-        Last updated: <b className="text-black">26/12/2025</b>
+        Last updated: <b className="text-black">26/1/2026</b>
       </p>
       <p className="text-gray-700 mt-5 text-base sm:text-lg">
-        This Privacy Policy describes how <b className="text-black">[Voltix.com], Owner [Vaibhav Shukla]</b> (“we”, “our”, “us”) collects, uses, stores, and protects your information when you visit or interact with our website. This website is created as a demo e-commerce project for learning and portfolio purposes only. By using this website, you agree to the terms described in this Privacy Policy.
+        This Privacy Policy describes how <b className="text-black">[Resume.com], Owner [Vaibhav Shukla]</b> (“we”, “our”, “us”) collects, uses, stores, and protects your information when you visit or interact with our website. This website is created as a demo e-commerce project for learning and portfolio purposes only. By using this website, you agree to the terms described in this Privacy Policy.
       </p>
       <p className="text-gray-700 mt-5 text-base sm:text-lg">
         We use your Personal Information only for providing and improving the Site. By using the Site, you agree to the collection and use of information in accordance with this policy.

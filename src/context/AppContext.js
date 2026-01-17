@@ -5,11 +5,12 @@ import { createContext, useContext, useState } from "react"
 const AppContext = createContext(null)
 
 export const AppProvider = ({ children }) => {
-  const [cart, setCart] = useState([])
+
+  const [render, setrender] = useState(true)
   const [theme, setTheme] = useState("light");
 
   return (
-    <AppContext.Provider value={{ cart, setCart, theme, setTheme }}>
+    <AppContext.Provider value={{ render, setrender, theme, setTheme }}>
       {children}
     </AppContext.Provider>
   )

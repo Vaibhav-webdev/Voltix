@@ -1,127 +1,144 @@
 "use client"
 
-import React from 'react'
-import { signOut } from 'next-auth/react'
-import { useState } from 'react'
-import { useSession } from 'next-auth/react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { useRouter } from "next/navigation";
+import { Menu } from "lucide-react";
+import { X } from "lucide-react"
+import Link from "next/link";
+import { useState } from "react";
 
-const navbar = () => {
-  const { data: session, status } = useSession()
-  const isLoggedIn = status === "authenticated"
-
-  const pathname = usePathname()
-  const [show, setshow] = useState(false)
-  const [mobileOpen, setMobileOpen] = useState(false)
-  const [open, setOpen] = useState(false)
-
-  const linkStyle = (path) =>
-    pathname === path
-      ? "text-black font-semibold"
-      : "text-gray-400 hover:text-black cursor-pointer transition-colors"
+export default function Navbar() {
+  const [open, setOpen] = useState(false);
+  
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id)
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    })
+  }
+  const router = useRouter()
   return (
-    <div className="fixed top-0 left-0 w-screen lg:w-full bg-white z-50 shadow">
-  {/* Top Bar */}
-  <div className="flex justify-between items-center px-12 lg:px-20 py-4">
-    <h2 className="font-black text-3xl cursor-pointer">Voltix</h2>
+  <nav className="w-full bg-green-100 px-10 sm:px-8 md:px-16 py-4 flex items-center justify-between relative">
+      
+      {/* Logo */}
+      <div className="text-2xl sm:text-3xl md:text-4xl font-bold">
+        resume<span className="text-green-500">.</span>
+      </div>
 
-    {/* Desktop Menu */}
-    <ul className="hidden lg:flex gap-6 font-semibold text-gray-500 items-center">
-      <Link href="/" className={linkStyle("/")}>Home</Link>
-      <Link href="/store" className={linkStyle("/store")}>Store</Link>
-      <Link href="/about" className={linkStyle("/about")}>About</Link>
-
-      {/* Pages Dropdown */}
-      <li className="relative">
-        <button
-          onClick={() => setOpen(!open)}
-          className="flex items-center gap-1 hover:text-black"
-        >
-          Pages
-          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M5.22 8.22 10 12.94l4.78-4.72" />
-          </svg>
-        </button>
-
-        {open && (
-          <div className="absolute top-full mt-2 w-48 bg-white shadow rounded">
-            <Link href="/privacy_policy" className="block px-4 py-2 hover:bg-gray-100">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="block px-4 py-2 hover:bg-gray-100">
-              Terms Of Use
-            </Link>
-          </div>
-        )}
-      </li>
-
-      <Link href="/contact" className={linkStyle("/contact")}>Contact</Link>
-    </ul>
-    {/* Desktop Auth Buttons */}
-    <div className="hidden lg:flex gap-3">
-      {isLoggedIn ? (
-        <button
-          onClick={() => signOut({ redirect: true, callbackUrl: "/login" })}
-          className="bg-black text-white px-6 py-3 rounded-2xl"
-        >
-          Logout
-        </button>
-      ) : (
-        <>
-          <Link href="/login?show=true">
-            <button className="bg-black hover:bg-transparent cursor-pointer transition-all ease-in-out duration-200 border hover:text-black text-center text-white px-6 py-3 rounded-2xl">
-              Register
-            </button>
+      {/* Desktop Nav Links */}
+      <ul className="hidden md:flex items-center gap-8 text-gray-600">
+        <li>
+          <Link href="#" className="hover:text-green-600">
+            Home
           </Link>
-          <Link href="/login">
-            <button className="border hover:bg-gray-200 cursor-pointer px-6 py-3 rounded-2xl">
+        </li>
+        <li>
+          <button
+            onClick={() => scrollToSection("feature")}
+            className="hover:text-green-600"
+          >
+            Features
+          </button>
+        </li>
+        <li>
+          <button
+            onClick={() => scrollToSection("testimonial")}
+            className="hover:text-green-600"
+          >
+            Testimonials
+          </button>
+        </li>
+        <li>
+          <Link href="/contact" className="hover:text-green-600">
+            Contact
+          </Link>
+        </li>
+      </ul>
+
+      {/* Desktop Actions */}
+      <div className="hidden md:flex items-center gap-4">
+        <button
+          onClick={() => router.push("/dashboard")}
+          className="px-5 py-3 rounded-full bg-green-500 text-white font-medium hover:bg-green-600 transition"
+        >
+          Get started
+        </button>
+        <button
+          onClick={() => router.push("/login")}
+          className="px-7 py-3 rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100 transition"
+        >
+          Login
+        </button>
+      </div>
+
+      {/* Hamburger Button (Mobile) */}
+      <button
+        onClick={() => setOpen(!open)}
+        className="md:hidden text-gray-700"
+      >
+        {open ? <X size={28} /> : <Menu size={28} />}
+      </button>
+
+      {/* Mobile Menu */}
+      {open && (
+        <div className="absolute top-full left-0 w-full bg-white shadow-lg md:hidden z-50">
+          <ul className="flex flex-col gap-4 px-6 py-6 text-gray-700">
+            <li>
+              <Link href="#" onClick={() => setOpen(false)}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <button
+                onClick={() => {
+                  scrollToSection("feature");
+                  setOpen(false);
+                }}
+              >
+                Features
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => {
+                  scrollToSection("testimonial");
+                  setOpen(false);
+                }}
+              >
+                Testimonials
+              </button>
+            </li>
+            <li>
+              <Link href="/contact" onClick={() => setOpen(false)}>
+                Contact
+              </Link>
+            </li>
+
+            {/* Divider */}
+            <hr className="my-2" />
+
+            {/* Mobile Actions */}
+            <button
+              onClick={() => {
+                router.push("/dashboard");
+                setOpen(false);
+              }}
+              className="w-full py-3 rounded-full bg-green-500 text-white font-medium"
+            >
+              Get started
+            </button>
+            <button
+              onClick={() => {
+                router.push("/login");
+                setOpen(false);
+              }}
+              className="w-full py-3 rounded-full border border-gray-300"
+            >
               Login
             </button>
-          </Link>
-        </>
+          </ul>
+        </div>
       )}
-    </div>
-
-    {/* Mobile Button */}
-    <button
-      onClick={() => setMobileOpen(!mobileOpen)}
-      className="lg:hidden"
-    >
-      <div className="w-6 h-1 bg-black my-1"></div>
-      <div className="w-6 h-1 bg-black my-1"></div>
-      <div className="w-6 h-1 bg-black my-1"></div>
-    </button>
-  </div>
-
-  {/* 🔥 Mobile Expand Menu */}
-  <div
-    className={`lg:hidden overflow-hidden transition-all duration-300 ${
-      mobileOpen ? "max-h-[500px]" : "max-h-0"
-    }`}
-  >
-    <ul className="flex flex-col gap-4 px-12 pb-6 font-semibold text-gray-600">
-      <Link href="/" onClick={() => setMobileOpen(false)}>Home</Link>
-      <Link href="/store" onClick={() => setMobileOpen(false)}>Store</Link>
-      <Link href="/about" onClick={() => setMobileOpen(false)}>About</Link>
-      <Link href="/contact" onClick={() => setMobileOpen(false)}>Contact</Link>
-
-      <Link href="/privacy_policy">Privacy Policy</Link>
-      <Link href="/terms">Terms Of Use</Link>
-
-      {!isLoggedIn ?
-        <>
-          <Link href="/login?show=true" className="font-bold">Register</Link>
-          <Link href="/login" className="font-bold">Login</Link>
-        </>
-      : <>
-          <Link href="/login" className="font-bold"><button onClick={() => signOut({ redirect: true, callbackUrl: "/login" })}>Logout</button></Link>
-        </>}
-    </ul>
-  </div>
-</div>
-
-  )
+    </nav>
+  );
 }
-
-export default navbar

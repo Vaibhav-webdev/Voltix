@@ -31,7 +31,7 @@ const Questions = () => {
 
   return (
     <div className="px-6 lg:px-0 pt-12 sm:pt-16 pb-16 sm:pb-20">
-      <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold">
+      <h2 className="text-center text-3xl text-gray-600 sm:text-4xl md:text-5xl font-bold">
         Frequently Asked Questions
       </h2>
 
